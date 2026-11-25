@@ -219,6 +219,6 @@ renderSkills();
 setupFilters();
 setupModal();
 loadRepos();
-// setupContact();
+setupContact();
 $("year").textContent = String(new Date().getFullYear());
 observeReveal();
