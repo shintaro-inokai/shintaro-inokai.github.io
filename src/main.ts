@@ -186,6 +186,7 @@ async function loadRepos(): Promise<void> {
 // ---------- お問い合わせ ----------
 function setupContact(): void {
   const form = $<HTMLFormElement>("contact-form");
+    if (!form) return; // フォームが無いときは何もしない
   const status = $("form-status");
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -214,6 +215,7 @@ function setupContact(): void {
 setupTheme();
 setupTyping();
 renderSkills();
+
 setupFilters();
 setupModal();
 loadRepos();
